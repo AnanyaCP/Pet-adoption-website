@@ -1,0 +1,233 @@
+/* css/style.css */
+
+:root {
+    /* Defining our color palette for easy changes */
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --secondary-color: #2c3e50;
+    --light-bg: #f0f4f8;
+    --text-dark: #333;
+    --text-light: #555;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* A clean, readable font for body text */
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Footer at the bottom of the page */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    background-color: var(--secondary-color);
+    color: #aeb9c4;
+}
+
+/* Main content area */
+.container {
+    max-width: 1200px; /* Constrains content width on large screens */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 20px;
+}
+
+/* NEW Hero Section Layout */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1; /* Takes up half the space */
+}
+
+.hero-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* General style for all sections */
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+/* NEW: Featured Pet Section */
+.featured-pet-card {
+    display: flex;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: left;
+}
+.featured-pet-card img {
+    width: 40%;
+    object-fit: cover;
+}
+.featured-pet-content {
+    padding: 40px;
+}
+.featured-pet-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+/* NEW: Styles for the Process section with icons */
+.process-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.process-step .icon {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.process-step h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* NEW: Styles for the Success Stories section */
+.stories-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.story-card {
+    background-color: var(--white);
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.story-card:hover {
+    transform: scale(1.05);
+}
+
+.story-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.story-card .content {
+    padding: 20px;
+}
+
+.story-card p {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.story-card .adopter-name {
+    font-weight: bold;
+    text-align: right;
+    color: var(--secondary-color);
+}
+
+/* Style for buttons */
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
