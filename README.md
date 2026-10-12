@@ -39,10 +39,10 @@ Install the following software:
 **1. Clone the repository**
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/AnanyaCP/Pet-adoption-website.git
 ```
 
-Replace `YOUR_REPOSITORY_URL` with the URL of your GitHub repository.
+
 
 **2. Move the project**
 
